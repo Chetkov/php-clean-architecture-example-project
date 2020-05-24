@@ -6,7 +6,7 @@ return [
 
     // Анализ с учетом пакетов подключенных через composer
     'vendor_based_modules' => [
-        'enabled' => false,
+        'enabled' => true,
         'vendor_path' => __DIR__ . '/vendor',
         'excluded' => [
             // '/excluded/vendor/package/dir',
