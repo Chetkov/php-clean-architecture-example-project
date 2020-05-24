@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "v.chetkov/php-clean-architecture": "0.0.2",
         "v.chetkov/money": "dev-master"
     },
     "autoload": {
