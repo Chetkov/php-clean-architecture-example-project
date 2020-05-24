@@ -2,11 +2,13 @@
 
 namespace PHPCAEP\Model\User;
 
+use PHPCAEP\Infrastructure\Notification;
 use PHPCAEP\Model\Location\Address;
 use PHPCAEP\Model\Model;
 use PHPCAEP\Model\Shop\OrderCollection;
 use PHPCAEP\Model\User\Contact\Contact;
 use PHPCAEP\Model\User\Contact\ContactCollection;
+use PHPCAEP\Model\User\Contact\Phone;
 
 /**
  * Class User
@@ -38,6 +40,8 @@ class User extends Model
         $this->address = $address;
         $this->contacts = new ContactCollection($contacts);
         $this->orders = new OrderCollection();
+
+        (new Notification\Sms\SmsNotifier())->notify(new Phone('84956063602'), 'Чуваки, у нас тот новыю юзер зарегался!');
     }
 
     /**

@@ -6,10 +6,12 @@ use Chetkov\Money\Exception\ExchangeRateWasNotFoundException;
 use Chetkov\Money\Exception\OperationWithDifferentCurrenciesException;
 use Chetkov\Money\Exception\RequiredParameterMissedException;
 use Chetkov\Money\Money;
+use PHPCAEP\Infrastructure\Notification\Email\EmailNotifier;
 use PHPCAEP\Model\Location\Address;
 use PHPCAEP\Model\Model;
 use PHPCAEP\Model\User\Contact\Contact;
 use PHPCAEP\Model\User\Contact\ContactCollection;
+use PHPCAEP\Model\User\Contact\Email;
 use PHPCAEP\Model\User\User;
 
 /**
@@ -38,6 +40,8 @@ class Order extends Model
         $this->ownerContacts = new ContactCollection($ownerContacts);
         $this->items = new ItemCollection();
         $this->status = new Status();
+
+        (new EmailNotifier())->notify(new Email('market@yandx.ru'), 'Сторонись! У нас тут новый заказ нарисовался, скоро хана вам! Задавим нахрен!');
     }
 
     /**
