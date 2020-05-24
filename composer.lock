@@ -1,0 +1,146 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "75f921a74f8ceb0aa262486f20d2fb19",
+    "packages": [
+        {
+            "name": "psr/simple-cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474",
+                "reference": "5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2020-04-21T06:43:17+00:00"
+        },
+        {
+            "name": "v.chetkov/data-structures",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chetkov/DataStructures.git",
+                "reference": "3cd5a5910a4054f262ff3dc21ae8c399f354b11a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chetkov/DataStructures/zipball/3cd5a5910a4054f262ff3dc21ae8c399f354b11a",
+                "reference": "3cd5a5910a4054f262ff3dc21ae8c399f354b11a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chetkov\\DataStructures\\": "src/",
+                    "Tests\\Chetkov\\DataStructures\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Валерий Четков",
+                    "email": "chetkov.valeriy@gmail.com"
+                }
+            ],
+            "time": "2019-08-06T23:58:47+00:00"
+        },
+        {
+            "name": "v.chetkov/money",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chetkov/Money.git",
+                "reference": "77840e179b7835fc8da1e50316855a9e155fd757"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chetkov/Money/zipball/77840e179b7835fc8da1e50316855a9e155fd757",
+                "reference": "77840e179b7835fc8da1e50316855a9e155fd757",
+                "shasum": ""
+            },
+            "require": {
+                "psr/simple-cache": "^1.0",
+                "v.chetkov/data-structures": "*"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.11.8",
+                "phpunit/phpunit": "^7.5",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chetkov\\Money\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Валерий Четков",
+                    "email": "chetkov.valeriy@gmail.com"
+                }
+            ],
+            "description": "Библиотека для упрощения работы с денежными значениями",
+            "time": "2019-08-11T08:10:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "v.chetkov/money": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,20 @@
+{
+    "name": "v.chetkov/phpca-example-project",
+    "type": "project",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Валерий Четков",
+            "email": "chetkov.valeriy@gmail.com"
+        }
+    ],
+    "require": {
+        "v.chetkov/money": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPCAEP\\": "src/"
+        }
+    }
+}
