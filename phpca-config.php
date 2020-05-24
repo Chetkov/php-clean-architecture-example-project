@@ -16,10 +16,10 @@ return [
     // Общие для всех модулей ограничения
     'restrictions' => [
         // Включение/отключение обнаружения нарушений принципа ацикличности зависимостей.
-        // 'check_acyclic_dependencies_principle' => true,
+         'check_acyclic_dependencies_principle' => true,
 
         // Включение/отключение обнаружения нарушений принципа устойчивых зависимостей.
-        // 'check_stable_dependencies_principle' => true,
+         'check_stable_dependencies_principle' => true,
 
         // Максимально допустимое расстояние до главной диагонали.
         // Элемент может отсутствовать или быть null, в таком случае ограничения не будут применены.
@@ -66,17 +66,16 @@ return [
                 // Список публичных элементов модуля. Если отсутствует или пустой, все элементы считаются публичными.
                 // Если не пустой, не перечисленные в списке элементы будут считаться приватными.
                 // Не должен содержать элементов, перечисленных в private_elements!
-                // 'public_elements' => [
-                //     First\Module\FirstClass::class,
-                //     First\Module\SecondClass::class,
-                // ],
+//                 'public_elements' => [
+//                     \PHPCAEP\Model\User\User::class,
+//                     \PHPCAEP\Model\Shop\Order::class,
+//                 ],
 
                 // Список приватных элементов модуля. Если отсутствует или пустой, все элементы считаются публичными.
                 // Не должен содержать элементов, перечисленных в public_elements!
-                // 'private_elements' => [
-                //     First\Module\FirstClass::class,
-                //     First\Module\SecondClass::class,
-                // ],
+                 'private_elements' => [
+                     \PHPCAEP\Model\User\Fio::class,
+                 ],
             ],
         ],
         [
