@@ -66,16 +66,16 @@ return [
                 // Список публичных элементов модуля. Если отсутствует или пустой, все элементы считаются публичными.
                 // Если не пустой, не перечисленные в списке элементы будут считаться приватными.
                 // Не должен содержать элементов, перечисленных в private_elements!
-//                 'public_elements' => [
-//                     \PHPCAEP\Model\User\User::class,
-//                     \PHPCAEP\Model\Shop\Order::class,
-//                 ],
+                // 'public_elements' => [
+                //     \PHPCAEP\Model\User\User::class,
+                //     \PHPCAEP\Model\Shop\Order::class,
+                // ],
 
                 // Список приватных элементов модуля. Если отсутствует или пустой, все элементы считаются публичными.
                 // Не должен содержать элементов, перечисленных в public_elements!
-                 'private_elements' => [
-                     \PHPCAEP\Model\User\Fio::class,
-                 ],
+                // 'private_elements' => [
+                //     \PHPCAEP\Model\User\Fio::class,
+                // ],
             ],
         ],
         [
