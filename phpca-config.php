@@ -1,5 +1,15 @@
 <?php
 
+use Chetkov\ConsoleLogger\ConsoleLoggerFactory;
+use Chetkov\ConsoleLogger\LoggerConfig;
+use Chetkov\ConsoleLogger\StyledLogger\LoggerStyle;
+use Chetkov\ConsoleLogger\StyledLogger\StyledLoggerDecorator;
+use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\AggregationDependenciesFinder;
+use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\CodeParsingDependenciesFinder;
+use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\DependenciesFinderInterface;
+use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\ReflectionDependenciesFinder;
+use Psr\Log\LoggerInterface;
+
 return [
     // Директория в которую будут складываться файлы отчета
     'reports_dir' => __DIR__ . '/phpca-reports',
@@ -114,5 +124,26 @@ return [
                 ],
             ],
         ],
+    ],
+    'factories' => [
+        'dependencies_finder' => function (): DependenciesFinderInterface {
+            return new AggregationDependenciesFinder(...[
+                new ReflectionDependenciesFinder(),
+                new CodeParsingDependenciesFinder(),
+            ]);
+        },
+        'logger' => function (): LoggerInterface {
+            $loggerConfig = new LoggerConfig();
+            $loggerConfig
+                ->setIsShowDateTime(true)
+                ->setIsShowLevel(false)
+                ->setIsShowData(false)
+                ->setDateTimeFormat('H:i:s')
+                ->setFieldDelimiter(' :: ');
+            return new StyledLoggerDecorator(
+                ConsoleLoggerFactory::create($loggerConfig),
+                new LoggerStyle()
+            );
+        }
     ],
 ];
