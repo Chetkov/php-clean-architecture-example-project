@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10e77f316d7d6d945437159d6b7cde8c",
+    "content-hash": "b3f737312c4eeb273de9a7f90e81ebdf",
     "packages": [
         {
             "name": "psr/log",
@@ -396,16 +396,16 @@
         },
         {
             "name": "v.chetkov/php-clean-architecture",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chetkov/php-clean-architecture.git",
-                "reference": "c9c65e64e260553c611acd72376b5c8f3a66d210"
+                "reference": "137c412769dae239087429ff85e23ec50c5d5285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chetkov/php-clean-architecture/zipball/c9c65e64e260553c611acd72376b5c8f3a66d210",
-                "reference": "c9c65e64e260553c611acd72376b5c8f3a66d210",
+                "url": "https://api.github.com/repos/Chetkov/php-clean-architecture/zipball/137c412769dae239087429ff85e23ec50c5d5285",
+                "reference": "137c412769dae239087429ff85e23ec50c5d5285",
                 "shasum": ""
             },
             "require": {
@@ -434,7 +434,7 @@
                 }
             ],
             "description": "PHP Clean Architecture",
-            "time": "2020-05-25T15:27:51+00:00"
+            "time": "2020-05-28T09:53:27+00:00"
         }
     ],
     "packages-dev": [],

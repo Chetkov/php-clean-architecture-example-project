@@ -8,6 +8,8 @@ use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\AggregationDependenc
 use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\CodeParsingDependenciesFinder;
 use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\DependenciesFinderInterface;
 use Chetkov\PHPCleanArchitecture\Service\DependenciesFinder\ReflectionDependenciesFinder;
+use Chetkov\PHPCleanArchitecture\Service\Report\DefaultReport\ReportRenderingService;
+use Chetkov\PHPCleanArchitecture\Service\Report\ReportRenderingServiceInterface;
 use Psr\Log\LoggerInterface;
 
 return [
@@ -131,6 +133,9 @@ return [
                 new ReflectionDependenciesFinder(),
                 new CodeParsingDependenciesFinder(),
             ]);
+        },
+        'report_rendering_service' => function (): ReportRenderingServiceInterface {
+            return new ReportRenderingService();
         },
         'logger' => function (): LoggerInterface {
             $loggerConfig = new LoggerConfig();
